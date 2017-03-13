@@ -1,64 +1,46 @@
-//
-//"use strict";
-//
-//import "../styles/app.scss"
-//
-//import React from "react"
-//
-//import ReactDOM from "react-dom"
-//
-//
-//import {Router,Route,hashHistory,IndexRoute,Redirect} from "react-router"
-//
-//import {App,TV,Show,Home,ShowIndex} from "./comment/router/route"
-//
-//
-//ReactDOM.render((
-//	<Router history={hashHistory}>
-//	     <Route path="/" component={App}>
-//	        <IndexRoute component={Home}></IndexRoute>
-//	        <Route path="tv" component={TV}>
-//	            <IndexRoute component={ShowIndex}></IndexRoute>
-//	            <Route path="/shows/:id" component={Show}></Route>
-//	            <Redirect from="shows/:id" to="/shows/:id"></Redirect>
-//	        </Route>
-//	     </Route>
-//	
-//	</Router>
-//
-//),document.getElementById("app"))
+"use strict";
+
+import "../styles/app.scss"
+
+import React from "react"
+
+import ReactDOM from "react-dom"
 
 
+import {Router,Route,hashHistory,IndexRoute,Redirect} from "react-router"
 
-
-
-
-
-
-
-'use strict'
-
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { Router, Route, hashHistory,IndexRoute,Redirect} from 'react-router'
-import {App,Tv,Show,Home,TvList} from './comment/router/route'
-
+import Index from "./components/index"
+import Foods from "./components/foods"
+import Classify from "./components/classify"
+import Mine from "./components/mine"
+import Ground from "./components/ground"
 ReactDOM.render((
-
 	<Router history={hashHistory}>
-	{/*	1341*/}
-		<Route path="/" component={App}>
-		<IndexRoute component={Home}></IndexRoute>
-			<Route path="tv" component={Tv}>
-				<IndexRoute component={TvList}></IndexRoute>
-				<Route path='/shows/:id' component={Show}>
-				</Route>
-				<Redirect from='shows/:id' to='/shows/:id' ></Redirect>
-			</Route>
-		</Route>
+	     <Route path="/" component={Index}>
+	        <IndexRoute component={Index}></IndexRoute>
+	        <Route path="foods" component={Foods}>
+	             <IndexRoute component={Foods}></IndexRoute>
+	        </Route>
+	        <Route path="classify" component={Classify}></Route>
+	        <Route path="ground" component={Ground}></Route>
+	        <Route path="mine" component={Mine}></Route>
+	        
+	     </Route>
+	
 	</Router>
-	),document.getElementById("app")
-)
+
+),document.getElementById("app"))
+
+
+
+
+
+
+
+
+
+
+
 
 
 

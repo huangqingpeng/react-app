@@ -111,7 +111,10 @@ module.exports={
 	],
 	//可以引入外部文件，引入jquery
 	externals:{
-		jquery:"window.jquery"
+		jquery:"window.jQuery",
+		react:"window.React",
+		"react-dom":"window.ReactDOM",
+		"react-router":"window.ReactRouter"
 	}
 	
 }
