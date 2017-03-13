@@ -1,0 +1,72 @@
+#app{
+    height:100%;
+}
+
+@font-face{
+    font-family: 'yofont';
+    src:url("/iconfont/iconfont.woff") format("woff"),url("/iconfont/iconfont.ttf") format("truetype");
+}
+
+
+.m-index{
+    @include flexbox();
+    @include flex-direction(column);
+    height:100%;
+    header{
+        height:0.45rem;
+        line-height:0.45rem;
+        background:#00b38a;
+        text-align: center;
+        color:#fff;
+        font-size: 0.18rem;
+    }
+    nav{
+        height:0.44rem;
+        background:#fff;
+        padding: 0.15rem;
+        /*垂直居中*/
+        @include align-items(center);
+        @include flexbox();
+        div{
+            @include flex();
+            line-height:0.44rem;
+        }
+        button{
+            width:0.84rem;
+            border: 0;
+            border-radius: 0.15rem;
+            background: #f5f5f5;
+            height:0.3rem;
+            color:#00b38a;
+        }
+//      border:1px solid #222;
+        /*解决1xp  1像素问题*/
+        @include border(0 0 1px 0,#e8e8e8);
+    }
+    
+    section{
+        @include flex(1);
+        width:100%;
+    }
+    
+    footer{
+        height:0.45rem;
+        background:pink;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
