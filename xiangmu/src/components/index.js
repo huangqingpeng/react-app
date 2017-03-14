@@ -6,14 +6,25 @@ import Section from "./section"
 import Footer from "./footer"
 import {Link} from "react-router"
 
+var tabBars=[
+    {
+    	 title:"推荐",
+    	 icon:"&#xe618;",
+    	 type:"features",
+    	 acativeIcon:"&#xe618;"
+    }
+
+
+]
+
 class Index extends React.Component{
 	
-	constructor(props){
-		super(props)
-		this.state={
-			currentType:"foods"
-		}
-	}
+//	constructor(props){
+//		super(props)
+//		this.state={
+//			currentType:"foods"
+//		}
+//	}
 	
 	
 	
@@ -61,10 +72,6 @@ class Index extends React.Component{
 			</div>
 		)
 	}
-	
-	
-	
-	
 }
 
 
