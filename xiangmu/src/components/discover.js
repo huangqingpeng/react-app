@@ -12,7 +12,7 @@ class Discover extends React.Component{
 	render(){
 		return(
 			<div>
-			    <div className="discover">Discover</div>
+			    <div className="m-discover">Discover</div>
 			</div>
 			 
 		)
