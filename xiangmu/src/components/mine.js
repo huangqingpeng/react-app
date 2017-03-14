@@ -12,7 +12,7 @@ class Mine extends React.Component{
 		return(
 			<div>
 			    
-			    <div className="mine">mine我的</div>
+			    <div className="m-mine">mine我的</div>
 			</div>
 		)
 	}

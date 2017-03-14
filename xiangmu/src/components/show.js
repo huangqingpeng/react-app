@@ -14,7 +14,7 @@ class Show extends React.Component{
 		return(
 			<div>
 			     
-			    <div className="show ">Show </div>
+			    <div className="m-show ">Show </div>
 			</div>
 		)
 	}

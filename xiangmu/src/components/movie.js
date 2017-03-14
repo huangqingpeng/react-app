@@ -8,7 +8,7 @@ class Movie extends React.Component{
 	render(){
 		return(
 			<div>
-			    <div className="movie">Movie</div>
+			    <div className="m-movie">Movie</div>
 			</div>
 			 
 		)

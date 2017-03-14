@@ -13,7 +13,7 @@ class Features extends React.Component{
 	render(){
 		return(
 			<div>
-			    <div className="features">Features推荐</div>
+			    <div className="m-features">Features推荐</div>
 			</div>
 		)
 	}
