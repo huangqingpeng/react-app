@@ -13,10 +13,6 @@ class Movie extends React.Component{
 			 
 		)
 	}
-	
-	
-	
-	
 }
 
 

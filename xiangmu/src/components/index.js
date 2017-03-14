@@ -1,10 +1,9 @@
 "use strict";
 
 import React from "react"
-import Header from "./header"
-import Section from "./section"
-import Footer from "./footer"
 import {Link} from "react-router"
+
+import TabBarStore from "../flux/stores/TabBarStore"
 
 var tabBars=[
     {
@@ -45,12 +44,16 @@ class Index extends React.Component{
 		super(props)
 	}
 	
-	
 	initTabBars(){
 		let type=TabBarStore.getItem()
 		return tabBars.map((item,index)=>{
 			return (
-				
+				<li className={type==item.type?"active":""}>
+			        <Link to={item.type}>
+			             <i className="yo-ico" dangerouslySetInnerHTML={{__html:type==item.type?item.activeIcon:item.icon}}></i>
+			             <b>{item.title}</b>
+				    </Link> 
+			    </li>
 			)
 		})
 	}
@@ -63,37 +66,7 @@ class Index extends React.Component{
 			    <footer>
 			     <nav>
 				     <ul>
-				        <li>
-					        <Link to="features">
-					             <i className="yo-ico">&#xe618;</i>
-					             <b>推荐</b>
-						    </Link> 
-					     </li>
-					    <li>
-					        <Link to="movie">
-					             <i className="yo-ico">&#xe618;</i>
-					             <b>电影</b>
-						    </Link> 
-					     </li>
-					     <li>
-					        <Link to="show">
-					             <i className="yo-ico">&#xe618;</i>
-					             <b>演出</b>
-						    </Link> 
-					     </li>
-					      <li>
-					        <Link to="discover">
-					             <i className="yo-ico">&#xe618;</i>
-					             <b>发现</b>
-						    </Link> 
-					     </li>
-					     <li>
-					        <Link to="mine">
-					             <i className="yo-ico">&#xe618;</i>
-					             <b>我的</b>
-						    </Link> 
-					     </li>
-					    
+				        {this.initTabBars.call(this)}
 				     </ul>
 				</nav>
 			</footer>

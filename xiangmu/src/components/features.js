@@ -1,15 +1,9 @@
 "use strict";
 
 import React from "react"
-import Header from "./header"
 import {Link} from "react-router"
 
 class Features extends React.Component{
-	
-	
-	
-	
-	
 	render(){
 		return(
 			<div>
@@ -17,10 +11,6 @@ class Features extends React.Component{
 			</div>
 		)
 	}
-	
-	
-	
-	
 }
 
 
