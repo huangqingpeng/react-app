@@ -27,27 +27,34 @@ class Index extends React.Component{
 				        <li>
 					        <Link to="foods">
 					             <i className="yo-ico">&#xe618;</i>
-					             <b>楚汉美食</b>
+					             <b>推荐</b>
 						    </Link> 
 					     </li>
 					    <li>
 					        <Link to="classify">
 					             <i className="yo-ico">&#xe618;</i>
-					             <b>菜品分类</b>
+					             <b>电影</b>
 						    </Link> 
 					     </li>
 					     <li>
 					        <Link to="ground">
 					             <i className="yo-ico">&#xe618;</i>
-					             <b>周边定位</b>
+					             <b>演出</b>
+						    </Link> 
+					     </li>
+					      <li>
+					        <Link to="others">
+					             <i className="yo-ico">&#xe618;</i>
+					             <b>发现</b>
 						    </Link> 
 					     </li>
 					     <li>
 					        <Link to="mine">
 					             <i className="yo-ico">&#xe618;</i>
-					             <b>我的传奇</b>
+					             <b>我的</b>
 						    </Link> 
 					     </li>
+					    
 				     </ul>
 				</nav>
 			</footer>
