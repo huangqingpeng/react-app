@@ -1,11 +1,10 @@
 "use strict";
 
 import React from "react"
-import Header from "./header"
+
 import {Link} from "react-router"
 
-class Foods extends React.Component{
-	
+class Discover extends React.Component{
 	
 	
 	
@@ -13,9 +12,9 @@ class Foods extends React.Component{
 	render(){
 		return(
 			<div>
-			    <header>楚汉美食</header>
-			    <div className="foods">foods</div>
+			    <div className="discover">Discover</div>
 			</div>
+			 
 		)
 	}
 	
@@ -25,7 +24,7 @@ class Foods extends React.Component{
 }
 
 
-export default Foods
+export default Discover
 
 
 

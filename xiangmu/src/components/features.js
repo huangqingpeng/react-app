@@ -1,18 +1,19 @@
 "use strict";
 
 import React from "react"
-
+import Header from "./header"
 import {Link} from "react-router"
 
-class Mine extends React.Component{
+class Features extends React.Component{
+	
+	
 	
 	
 	
 	render(){
 		return(
 			<div>
-			    
-			    <div className="mine">mine我的</div>
+			    <div className="features">Features推荐</div>
 			</div>
 		)
 	}
@@ -23,7 +24,7 @@ class Mine extends React.Component{
 }
 
 
-export default Mine
+export default Features
 
 
 

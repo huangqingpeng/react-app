@@ -25,25 +25,25 @@ class Index extends React.Component{
 			     <nav>
 				     <ul>
 				        <li>
-					        <Link to="foods">
+					        <Link to="features">
 					             <i className="yo-ico">&#xe618;</i>
 					             <b>推荐</b>
 						    </Link> 
 					     </li>
 					    <li>
-					        <Link to="classify">
+					        <Link to="movie">
 					             <i className="yo-ico">&#xe618;</i>
 					             <b>电影</b>
 						    </Link> 
 					     </li>
 					     <li>
-					        <Link to="ground">
+					        <Link to="show">
 					             <i className="yo-ico">&#xe618;</i>
 					             <b>演出</b>
 						    </Link> 
 					     </li>
 					      <li>
-					        <Link to="others">
+					        <Link to="discover">
 					             <i className="yo-ico">&#xe618;</i>
 					             <b>发现</b>
 						    </Link> 

@@ -4,16 +4,11 @@ import React from "react"
 
 import {Link} from "react-router"
 
-class Classify extends React.Component{
-	
-	
-	
-	
+class Movie extends React.Component{
 	render(){
 		return(
 			<div>
-			    <header>菜品分类</header>
-			    <div className="classify">classify</div>
+			    <div className="movie">Movie</div>
 			</div>
 			 
 		)
@@ -25,7 +20,7 @@ class Classify extends React.Component{
 }
 
 
-export default Classify
+export default Movie
 
 
 

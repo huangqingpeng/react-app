@@ -4,7 +4,7 @@ import React from "react"
 
 import {Link} from "react-router"
 
-class Ground extends React.Component{
+class Show extends React.Component{
 	
 	
 	
@@ -13,8 +13,8 @@ class Ground extends React.Component{
 	render(){
 		return(
 			<div>
-			     <header>周边定位</header>
-			    <div className="ground">gronds</div>
+			     
+			    <div className="show ">Show </div>
 			</div>
 		)
 	}
@@ -25,7 +25,7 @@ class Ground extends React.Component{
 }
 
 
-export default Ground
+export default Show 
 
 
 

@@ -10,19 +10,22 @@ import ReactDOM from "react-dom"
 import {Router,Route,hashHistory,IndexRoute,Redirect} from "react-router"
 
 import Index from "./components/index"
-import Foods from "./components/foods"
-import Classify from "./components/classify"
+import Features from "./components/features"
+import Movie from "./components/movie"
 import Mine from "./components/mine"
-import Ground from "./components/ground"
+import Show from "./components/show"
+import Discover from "./components/discover"
+
+
 ReactDOM.render((
 	<Router history={hashHistory}>
 	     <Route path="/" component={Index}>
-	        <IndexRoute component={Foods}></IndexRoute>
-	        
-	        <Route path="classify" component={Classify}></Route>
-	        <Route path="ground" component={Ground}></Route>
+	        <IndexRoute  component={Features}></IndexRoute>
+	        <Route path="features" component={Features}></Route>
+	        <Route path="movie" component={Movie}></Route>
+	        <Route path="show" component={Show}></Route>
 	        <Route path="mine" component={Mine}></Route>
-	        
+	        <Route path="discover" component={Discover}></Route>
 	     </Route>
 	
 	</Router>
