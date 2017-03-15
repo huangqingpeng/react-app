@@ -50,7 +50,7 @@ class Index extends React.Component{
 			return (
 				<li className={type==item.type?"active":""}>
 			        <Link to={item.type}>
-			             <i className="yo-ico" dangerouslySetInnerHTML={{__html:type==item.type?item.activeIcon:item.icon}}></i>
+			             <i className="yo-ico" dangerouslySetInnerHTML={{__html:type==item.type?item.acativeIcon:item.icon}}></i>
 			             <b>{item.title}</b>
 				    </Link> 
 			    </li>

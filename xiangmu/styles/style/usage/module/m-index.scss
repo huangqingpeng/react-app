@@ -1,5 +1,8 @@
 @charset "utf-8";
-
+ @font-face{
+                font-family: 'yofont';
+                src:url("/iconfont/iconfont.woff") format("woff"),url("/iconfont/iconfont.ttf") format("truetype");
+            }
 .m-index{
     @include flexbox();
     @include flex-direction(column);
@@ -37,12 +40,12 @@
                             color:rgba(255,255,255,0.5)
                         }
                         i{
-                            font-size: .32rem;
-                            line-height: .32rem;
+                            font-size: .30rem;
+                            line-height: .30rem;
                         }
                         b{
                             font-size: .12rem;
-                            line-height: .12rem;
+                            line-height: .14rem;
                             font-weight: normal;
                             @include transform(scale(0.8,0.8));
                         }
