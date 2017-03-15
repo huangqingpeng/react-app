@@ -718,9 +718,8 @@ html {
       width: 100%; }
 
 @font-face {
-  html body #app {
-    font-family: 'yofont';
-    src: url("/iconfont/iconfont.woff") format("woff"), url("/iconfont/iconfont.ttf") format("truetype"); } }
+  font-family: 'yofont';
+  src: url("/iconfont/iconfont.woff") format("woff"), url("/iconfont/iconfont.ttf") format("truetype"); }
 
 .m-index {
   display: -webkit-box;
@@ -778,11 +777,11 @@ html {
             .m-index footer nav ul li a i, .m-index footer nav ul li a b {
               color: rgba(255, 255, 255, 0.5); }
             .m-index footer nav ul li a i {
-              font-size: .32rem;
-              line-height: .32rem; }
+              font-size: .30rem;
+              line-height: .30rem; }
             .m-index footer nav ul li a b {
               font-size: .12rem;
-              line-height: .12rem;
+              line-height: .14rem;
               font-weight: normal;
               -webkit-transform: scale(0.8, 0.8);
               transform: scale(0.8, 0.8); }
