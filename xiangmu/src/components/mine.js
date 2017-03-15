@@ -8,14 +8,11 @@ class Mine extends React.Component{
 	render(){
 		return(
 			<div>
-			    
 			    <div className="m-mine">mine我的</div>
 			</div>
 		)
 	}
 }
-
-
 export default Mine
 
 
