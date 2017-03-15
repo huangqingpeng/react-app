@@ -373,10 +373,6 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _header = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./header\""); e.code = 'MODULE_NOT_FOUND';; throw e; }()));
-
-var _header2 = _interopRequireDefault(_header);
-
 var _reactRouter = __webpack_require__(1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -436,19 +432,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _header = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./header\""); e.code = 'MODULE_NOT_FOUND';; throw e; }()));
-
-var _header2 = _interopRequireDefault(_header);
-
-var _section = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./section\""); e.code = 'MODULE_NOT_FOUND';; throw e; }()));
-
-var _section2 = _interopRequireDefault(_section);
-
-var _footer = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./footer\""); e.code = 'MODULE_NOT_FOUND';; throw e; }()));
-
-var _footer2 = _interopRequireDefault(_footer);
-
 var _reactRouter = __webpack_require__(1);
+
+var _TabBarStore = __webpack_require__(2);
+
+var _TabBarStore2 = _interopRequireDefault(_TabBarStore);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -497,7 +485,7 @@ var Index = function (_React$Component) {
 	_createClass(Index, [{
 		key: "initTabBars",
 		value: function initTabBars() {
-			var type = TabBarStore.getItem();
+			var type = _TabBarStore2.default.getItem();
 			return tabBars.map(function (item, index) {
 				return _react2.default.createElement(
 					"li",
@@ -505,7 +493,7 @@ var Index = function (_React$Component) {
 					_react2.default.createElement(
 						_reactRouter.Link,
 						{ to: item.type },
-						_react2.default.createElement("i", { className: "yo-ico", dangerouslySetInnerHTML: { __html: type == item.type ? item.activeIcon : item.icon } }),
+						_react2.default.createElement("i", { className: "yo-ico", dangerouslySetInnerHTML: { __html: type == item.type ? item.acativeIcon : item.icon } }),
 						_react2.default.createElement(
 							"b",
 							null,
@@ -535,7 +523,7 @@ var Index = function (_React$Component) {
 						_react2.default.createElement(
 							"ul",
 							null,
-							this.initTabBars().call(this)
+							this.initTabBars.call(this)
 						)
 					)
 				)
@@ -747,7 +735,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = {
 	setItem: function setItem(text) {
-		_AppDispatcher2.default.dispatcher({
+		_AppDispatcher2.default.dispatch({
 			actionType: "SET_ITEM",
 			text: text
 		});
