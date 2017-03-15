@@ -93,7 +93,7 @@ Object.defineProperty(exports, "__esModule", {
 var _events = __webpack_require__(13);
 
 exports.default = Object.assign({}, _events.EventEmitter.prototype, {
-	item: "",
+	item: "features",
 	getItem: function getItem() {
 		return this.item;
 	},
@@ -493,7 +493,7 @@ var Index = function (_React$Component) {
 					_react2.default.createElement(
 						_reactRouter.Link,
 						{ to: item.type },
-						_react2.default.createElement("i", { className: "yo-ico", dangerouslySetInnerHTML: { __html: type == item.type ? item.activeIcon : item.icon } }),
+						_react2.default.createElement("i", { className: "yo-ico", dangerouslySetInnerHTML: { __html: type == item.type ? item.acativeIcon : item.icon } }),
 						_react2.default.createElement(
 							"b",
 							null,
@@ -523,7 +523,7 @@ var Index = function (_React$Component) {
 						_react2.default.createElement(
 							"ul",
 							null,
-							this.initTabBars().call(this)
+							this.initTabBars.call(this)
 						)
 					)
 				)
@@ -735,7 +735,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = {
 	setItem: function setItem(text) {
-		_AppDispatcher2.default.dispatcher({
+		_AppDispatcher2.default.dispatch({
 			actionType: "SET_ITEM",
 			text: text
 		});

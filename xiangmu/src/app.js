@@ -1,6 +1,6 @@
 "use strict";
 
-import "../styles/app.scss"
+import "../style/app.scss"
 
 import React from "react"
 
