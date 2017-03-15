@@ -2,7 +2,7 @@
 import {EventEmitter} from "events"
 
 export default Object.assign({},EventEmitter.prototype,{
-	item:"",
+	item:"features",
 	getItem(){
 		return this.item;
 	},
