@@ -7,46 +7,14 @@ import {Link} from "react-router"
 class Show extends React.Component{	render(){
 		return(
 			<div>
-			     
-			    <div className="m-show ">Show </div>
+			    <div className="m-show">
+						abcd
+					</div>
 			</div>
 		)
 }
 
-	
+
 }
 
-
-export default Show 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default Show
