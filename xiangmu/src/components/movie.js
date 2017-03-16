@@ -6,6 +6,8 @@ import {Link} from "react-router"
 
 import Scroller from "../../component_dev/scroller/src/index"
 
+import WillShows from "./willshow"
+
 class Movie extends React.Component{
 	render(){
 		return(
@@ -28,7 +30,7 @@ class Movie extends React.Component{
 								</div>
 							</header>
 							<section>
-	
+	                            <WillShows />
 							</section>
 					</div>
 			    </Scroller>

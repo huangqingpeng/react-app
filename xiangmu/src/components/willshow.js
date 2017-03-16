@@ -19,7 +19,7 @@ class WillShows extends React.Component{
 
 
 
-
+export default  WillShows
 
 
 
