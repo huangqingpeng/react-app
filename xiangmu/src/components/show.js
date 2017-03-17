@@ -4,7 +4,9 @@ import React from "react"
 
 import {Link} from "react-router"
 
-class Show extends React.Component{	render(){
+class Show extends React.Component{
+	
+	render(){
 		return(
 		    <div className="show">
 					<header>
@@ -34,15 +36,13 @@ class Show extends React.Component{	render(){
 								<h3>[北京]JAC江淮汽车*SWIN NEW WORLD中国巡回歌迷...</h3>
 								<p>2017年3月19日-2017年3月19日格瓦拉生活·糖果Live</p>
 								<span>￥380</span>
-								
+
 							</div>
 						</div>
 					</section>
 				</div>
 		)
-}
-
-
+	}
 }
 
 export default Show
