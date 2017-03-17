@@ -8,27 +8,28 @@ import {Link} from "react-router"
 
 class Discover extends React.Component{
     
-    constructor(props){
-        super(props)
-        this.state = {
-            discoverData:[]
-        }
-    }
+    // constructor(props){
+    //     super(props)
+    //     this.state = {
+    //         discoverData:[<div/>]
+    //     }
+    // }
     
-    setNodes(callback){
-        fetch('/api/m-discover')
-            .then(response=>response.json())
-            .then(res=>{
-                let data = res.recommendedscene.map((val,key) => {
-                    return (
-                        <li className="item">
-                            <img src={val.logourl}/>
-                        </li>
-                    )
-                })
-                callback(data)
-            })
-    }
+    // setNodes(callback){
+    //     fetch('/api/discover.php')
+    //         .then(response=>response.json())
+    //         .then(res=>{
+    //             console.log(res)
+    //             let data = res.recommendedscene.map((val,key) => {
+    //                 return (
+    //                     <li className="item">
+    //                         <img src={val.logourl}/>
+    //                     </li>
+    //                 )
+    //             })
+    //             callback(data)
+    //         })
+    // }
     
 	render(){
 		return(
@@ -36,23 +37,24 @@ class Discover extends React.Component{
                 <header>发现</header>
                 <Scroller>
                     <Carousel>
-                        {/*<li className="item">1</li>*/}
-                        {/*<li className="item">2</li>*/}
-                        {/*<li className="item">3</li>*/}
-                        {this.state.discoverData}
+                        <li className="item"><img src="http://mobileimg.gewara.com/images/activity/201703/s_4df98ee0_1598baf99d5__260e.jpg" alt=""/></li>
+                        <li className="item"><img src="http://mobileimg.gewara.com/images/activity/201703/MLb2rhjem5uh2LD2zqyLuXnaayg5.jpg" alt=""/></li>
+                        <li className="item"><img src="http://mobileimg.gewara.com/images/activity/201703/s_1de32021_1598bafaafe__2590.jpg" alt=""/></li>
+                        <li className="item"><img src="http://mobileimg.gewara.com/images/activity/201703/s_1de32021_1598bafaafe__2e60.jpg" alt=""/></li>
+                        {/*{this.state.discoverData}*/}
                     </Carousel>
                 </Scroller>
             </div>
 		)
 	}
     
-    componentDidMount(){
-        this.setNodes.call(this,(data)=>{
-            this.setState({
-                discoverData: data
-            })
-        })
-    }
+    // componentDidMount(){
+    //     this.setNodes.call(this,(data)=>{
+    //         this.setState({
+    //             discoverData: data
+    //         })
+    //     })
+    // }
 }
 
 

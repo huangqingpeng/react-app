@@ -5,6 +5,6 @@ var discover = require('./m-discover.json')
 
 module.exports = function () {
     return{
-        'm-discover':discover
+        'discover.php':discover
     }
 }
