@@ -1,0 +1,33 @@
+@charset "utf-8";
+.m-discover{
+  background: #FFFFFF;
+  @include flexbox();
+  @include flex-direction(column);
+  height:100%;
+  header{
+    height:.49rem;
+    color: #ff2800;
+    font-size: .16rem;
+    text-align: center;
+    line-height: .49rem;
+    @include border(0 0 1px 0)
+  }
+  > div{
+    @include flex();
+    width:100%;
+    > div.scroller{
+      @include flex-direction(column);
+      @include flexbox();
+      height:100%;
+      >div{
+        height:1.90rem;
+        >ul.cont{
+          height:100%;
+          >li{
+            height:100%;
+          }
+        }
+      }
+    }
+  }
+}
