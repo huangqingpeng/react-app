@@ -3,28 +3,24 @@
 .m-willshow{
     padding-top:0.3rem;
     width:100%;
-
     @include flexbox();
     @include flex-direction(column);
-    height:100%;
-    
+    overflow: hidden;
     >div.months{
         height:0.38rem;
     }
-    overflow: hidden;
-    div.yo-scroller{
+    >div.yo-scroller{
         @include flex();
+        height:6rem;
         width:100%;
-        div.scroller.movies{
-            height:100%;
+        overflow: hidden;
+        div.scroller{
             width:100%;
-            overflow: hidden;
-            div{
+            .movies{
+            >div{
                 @include flexbox();
                 @include flex-direction(column);
-//              height:2.6rem;
                 width:100%;
-                height: 100%;
                 h2{
                     width:100%;
                     height:0.4rem;
@@ -57,30 +53,30 @@
                         display: block;
                        >span{
                            @include flex();
-                           @include ellipsis($width: null, $line-clamp: 1);
-                           padding:0.2rem 0;
-                           width:100%;
+                           @include ellipsis(null,3);
                            display: block;
-//                         line-height: 0.20rem;
-                           padding:0.1rem;
+                           padding:0.05rem 0.05rem;
+                           width:100%;
+                           
                        }
-                       span:first-child{
-                           font-size: 0.2rem;
-                           color:#666;
-                       }
-                       span:nth-child(2){
-                          
-                           font-size: 0.16rem;
-                           color:#666;
-                       }
-                       span:nth-child(3){
-                         
-                           font-size: 0.14rem;
-                           color:#666;
-                       }
+//                     span:first-child{
+//                         @include  flex();
+//                         font-size: 0.2rem;
+//                         color:#666;
+//                     }
+//                     span:nth-child(2){
+//                        @include flex();
+//                         font-size: 0.16rem;
+//                         color:#666;
+//                     }
+//                     span:nth-child(3){
+//                       @include flex();
+//                         font-size: 0.14rem;
+//                         color:#666;
+//                     }
                     }
                 }
-                
+            }
             }
             
         }

@@ -13,8 +13,8 @@ class WillShows extends React.Component{
 		}
 	}
 	
-	setNodes(callback){
-		fetch("/api/willshow1.php")
+	setNodes(url,callback){
+		fetch(url)
 		.then(response=>
 			response.json()
 			)
@@ -50,7 +50,29 @@ class WillShows extends React.Component{
 	                <span>6</span>
 	                <span>7</span>
 		        </div>
-			     <Scroller>
+			    <Scroller
+			        ref="scroller"
+				    usePullRefresh={true}
+				    onRefresh={() => {
+				        this.setNodes.call(this,"/api/willshow2.php",(data)=>{
+							console.log(data)
+							this.setState({
+								willshow:data.concat(this.state.willshow)
+							})
+							this.refs.scroller.stopRefreshing(true) 
+						})
+				    }}
+				    useLoadMore={true}
+					    onLoad={() => {
+						    this.setNodes.call(this,"/api/willshow3.php",(data)=>{
+							console.log(data)
+							this.setState({
+								willshow:this.state.willshow.concat(data)
+							})
+							this.refs.scroller.stopLoading(true)
+						})
+				    }}
+			    >
 			        <div className="movies">
 			            <div>
 			                <h2>3月17日星期五</h2>
@@ -62,8 +84,10 @@ class WillShows extends React.Component{
 		)
 	}
 	
+	
+	
 	componentDidMount(){
-		this.setNodes.call(this,(data)=>{
+		this.setNodes.call(this,"/api/willshow1.php",(data)=>{
 			console.log(data)
 			this.setState({
 				willshow:data
