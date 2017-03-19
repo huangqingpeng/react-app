@@ -80,7 +80,7 @@ module.exports={
 		proxy:{//mock数据模仿时配置的服务器
 			"/api":{
 				target:"http://localhost:3000",
-				pathRewriter:{"^/api":""}
+				pathRewrite:{"^/api":""}
 			}
 		}
 	},

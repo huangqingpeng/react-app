@@ -6,9 +6,38 @@
  import Scroller from "../../component_dev/scroller/src/"
  
 class WillShows extends React.Component{
+	constructor(props){
+		super(props)
+		this.state={
+			willshow:[]
+		}
+	}
 	
-	
-	
+	setNodes(callback){
+		fetch("/api/willshow1.php")
+		.then(response=>
+			response.json()
+			)
+		.then(res=>{
+			console.log(res)
+			let nodes=res.map((val,index)=>{
+				return(
+					<div className="movies-box">
+	                    <i><img src={val.picture} /></i>
+	                    <b>
+	                       <span>{val.chname}</span>
+	                       <span>{val.directorName}</span>
+	                       <span>{val.gutdescipty}</span>
+	                    </b>
+	                 </div>
+				)
+			})
+			callback(nodes)
+		})
+		.catch(e=>{
+			console.log(e)
+		})
+	}
 	
 	
 	render(){
@@ -25,20 +54,23 @@ class WillShows extends React.Component{
 			        <div className="movies">
 			            <div>
 			                <h2>3月17日星期五</h2>
-			                 <div className="movies-box">
-			                    <i><img src="http://img7.doubanio.com/view/movie_poster_cover/lpst/public/p480747492.jpg"/></i>
-			                    <b>
-			                       <span>美女与野兽</span>
-			                       <span>比尔康顿</span>
-			                       <span>22055人想看</span>
-			                    </b>
-			                 </div>
+		                    {this.state.willshow}
 			            </div>
 			        </div>
 			    </Scroller>
 			</div>
 		)
 	}
+	
+	componentDidMount(){
+		this.setNodes.call(this,(data)=>{
+			console.log(data)
+			this.setState({
+				willshow:data
+			})
+		})
+	}
+	
 }
 
 
