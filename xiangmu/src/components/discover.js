@@ -8,28 +8,76 @@ import {Link} from "react-router"
 
 class Discover extends React.Component{
     
-    // constructor(props){
-    //     super(props)
-    //     this.state = {
-    //         discoverData:[<div/>]
-    //     }
-    // }
+    constructor(props){
+        super(props)
+        this.state = {
+            discoverData:[<div/>],
+            discoverData1:[],
+            discoverHudong:[],
+            discoverZhuanlan:[]
+        }
+    }
     
-    // setNodes(callback){
-    //     fetch('/api/discover.php')
-    //         .then(response=>response.json())
-    //         .then(res=>{
-    //             console.log(res)
-    //             let data = res.recommendedscene.map((val,key) => {
-    //                 return (
-    //                     <li className="item">
-    //                         <img src={val.logourl}/>
-    //                     </li>
-    //                 )
-    //             })
-    //             callback(data)
-    //         })
-    // }
+    setNodes(callback){
+        fetch('/api/discover.php')
+            .then(response=>response.json())
+            .then(res=>{
+                console.log(res)
+                let data = res.recommendedscene.map((val,key) => {
+                    return (
+                        <li className="item">
+                            <a href={val.link}>
+                                <img src={val.logourl}/>
+                            </a>
+                        </li>
+                    )
+                })
+    
+               let data1 = res.recommendeddayQuestion.map((val,key) => {
+                    return (
+                        <div>
+                            <a href={val.link}>
+                                <img src={val.logourl}/>
+                                <h2>
+                                    {val.title}<br/>
+                                    <span>{val.content}</span>
+                                </h2>
+                            </a>
+                        </div>
+                    )
+                })
+    
+                let hudong = res.recommended_interactive.map((val,key) => {
+                    return (
+                        <a href={val.link}>
+                            <img src={val.logourl}/>
+                        </a>
+                    )
+                })
+    
+                let zhuanlan = res.recommendedcolumn.map((val,key) => {
+                    return (
+                        <div>
+                            <a href={val.link}>
+                                <img src={val.logourl} alt=""/>
+                                <p>
+                                    <img src={val.headpicUrl} alt=""/>
+                                    <span>
+                                        {val.name}
+                                        <img src={val.bigVurl} alt=""/>
+                                    </span>
+                                </p>
+                                <b>{val.body}</b>
+                                <span>{}</span>
+                            </a>
+                        </div>
+                    )
+                })
+                
+                callback(data,data1,hudong,zhuanlan)
+                console.log(data,data1,hudong)
+            })
+    }
     
 	render(){
 		return(
@@ -37,24 +85,55 @@ class Discover extends React.Component{
                 <header>发现</header>
                 <Scroller>
                     <Carousel>
-                        <li className="item"><img src="http://mobileimg.gewara.com/images/activity/201703/s_4df98ee0_1598baf99d5__260e.jpg" alt=""/></li>
-                        <li className="item"><img src="http://mobileimg.gewara.com/images/activity/201703/MLb2rhjem5uh2LD2zqyLuXnaayg5.jpg" alt=""/></li>
-                        <li className="item"><img src="http://mobileimg.gewara.com/images/activity/201703/s_1de32021_1598bafaafe__2590.jpg" alt=""/></li>
-                        <li className="item"><img src="http://mobileimg.gewara.com/images/activity/201703/s_1de32021_1598bafaafe__2e60.jpg" alt=""/></li>
-                        {/*{this.state.discoverData}*/}
+                        {this.state.discoverData}
                     </Carousel>
+                    <div className="game">
+                        {this.state.discoverData1}
+                    </div>
+                    <div className="hudong">
+                        <h3>
+                            <span></span>
+                            互动
+                        </h3>
+                        <Scroller
+                            scrollX={true}
+                            scrollY={false}
+                        >
+                            <div className="hudong-content">
+                                {this.state.discoverHudong}
+                            </div>
+                        </Scroller>
+
+                    </div>
+                    <div className="zhuanlan">
+                        <h3>
+                            <span></span>
+                            专栏
+                        </h3>
+                        <Scroller
+                            scrollX={true}
+                            scrollY={false}
+                        >
+                            <div className="zhuanlan-content">
+                                {this.state.discoverZhuanlan}
+                            </div>
+                        </Scroller>
+                    </div>
                 </Scroller>
             </div>
 		)
 	}
     
-    // componentDidMount(){
-    //     this.setNodes.call(this,(data)=>{
-    //         this.setState({
-    //             discoverData: data
-    //         })
-    //     })
-    // }
+    componentDidMount(){
+        this.setNodes.call(this,(data,data1,hudong,zhuanlan)=>{
+            this.setState({
+                discoverData: data,
+                discoverData1:data1,
+                discoverHudong:hudong,
+                discoverZhuanlan:zhuanlan
+            })
+        })
+    }
 }
 
 
