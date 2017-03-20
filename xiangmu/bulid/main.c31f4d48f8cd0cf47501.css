@@ -735,42 +735,11 @@ html {
     -webkit-flex: 1;
     flex: 1;
     width: .1px;
-    width: 100%;
-    background: #fff;
-    position: relative; }
-    .m-index section::after {
-      pointer-events: none;
-      position: absolute;
-      z-index: 999;
-      top: 0;
-      left: 0;
-      overflow: hidden;
-      content: " ";
-      border-color: #cecfce;
-      border-style: solid;
-      border-width: 0 0 1px 0;
-      -webkit-transform-origin: 0 0;
-      transform-origin: 0 0; }
-      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
-        .m-index section::after {
-          width: 100%;
-          height: 100%; } }
-      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
-        .m-index section::after {
-          width: 200%;
-          height: 200%;
-          -webkit-transform: scale(0.5);
-          transform: scale(0.5); } }
-      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
-        .m-index section::after {
-          width: 300%;
-          height: 300%;
-          -webkit-transform: scale(0.33333);
-          transform: scale(0.33333); } }
+    width: 100%; }
   .m-index footer {
-    height: 0.50rem;
+    height: 0.44rem;
     width: 100%;
-    background: #fff; }
+    background: #e3cca3; }
     .m-index footer nav {
       width: 100%;
       height: 100%; }
@@ -806,13 +775,13 @@ html {
             -webkit-align-items: center;
             align-items: center; }
             .m-index footer nav ul li a i, .m-index footer nav ul li a b {
-              color: #adaead; }
+              color: rgba(255, 255, 255, 0.5); }
             .m-index footer nav ul li a i {
-              font-size: .32rem;
-              line-height: .34rem; }
+              font-size: .30rem;
+              line-height: .30rem; }
             .m-index footer nav ul li a b {
               font-size: .12rem;
-              line-height: .16rem;
+              line-height: .14rem;
               font-weight: normal;
               -webkit-transform: scale(0.8, 0.8);
               transform: scale(0.8, 0.8); }
@@ -884,177 +853,6 @@ html {
           height: 100%; }
           .m-discover > div > div.scroller > div > ul.cont > li {
             height: 100%; }
-
-@font-face {
-  font-family: 'yofont';
-  src: url("/iconfont/iconfont-mine.woff") format("woff"), url("/iconfont/iconfont-mine.ttf") format("truetype"); }
-
-.mine_box {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
-  background: #f7efef; }
-  .mine_box header {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
-    width: .1px;
-    width: 100%; }
-    .mine_box header .head {
-      background: url(/img/mine_background.png) no-repeat;
-      background-size: 4rem 2rem;
-      width: 100%;
-      height: 2rem;
-      text-align: center; }
-      .mine_box header .head .icon {
-        width: 100%;
-        height: 0.5rem; }
-        .mine_box header .head .icon i {
-          font-size: 0.2rem; }
-      .mine_box header .head img {
-        width: 0.8rem; }
-      .mine_box header .head a {
-        line-height: 0.4rem;
-        color: #bdbebd; }
-    .mine_box header .header_list {
-      width: 100%;
-      height: 1rem; }
-      .mine_box header .header_list ul {
-        display: flex;
-        padding-top: 0.2rem;
-        background: #fff; }
-        .mine_box header .header_list ul li {
-          flex: 1;
-          text-align: center; }
-          .mine_box header .header_list ul li i {
-            margin: 0 auto; }
-          .mine_box header .header_list ul li h2 {
-            font-size: 0.15rem;
-            font-weight: 600;
-            color: #666;
-            line-height: 0.4rem; }
-  .mine_box section ul {
-    background: #fff;
-    margin-bottom: 0.1rem; }
-    .mine_box section ul li {
-      display: flex; }
-      .mine_box section ul li p {
-        flex: 1;
-        font-size: 0.15rem;
-        font-weight: 600;
-        line-height: 0.4rem; }
-      .mine_box section ul li i {
-        flex: 1;
-        font-size: 0.15rem;
-        font-weight: 500;
-        line-height: 0.4rem; }
-
-@font-face {
-  font-family: 'yofont';
-  src: url("/iconfont/iconfont-movie.woff") format("woff"), url("/iconfont/iconfont-movie.ttf") format("truetype"); }
-
-.m-movie {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  height: 100%; }
-  .m-movie header {
-    width: 100%;
-    height: 0.72rem;
-    position: relative; }
-    .m-movie header:first-child {
-      display: inline-block;
-      width: 0.75rem;
-      height: 0.44rem;
-      position: relative; }
-      .m-movie header:first-child p {
-        font-weight: normal;
-        font-size: 0.12rem;
-        position: absolute;
-        left: 0.13rem;
-        top: 0.18rem; }
-      .m-movie header:first-child i {
-        width: 0.1rem;
-        height: 0.06rem;
-        position: absolute;
-        left: 0.41rem;
-        top: 0.19rem; }
-    .m-movie header > :nth-child(2) {
-      position: absolute;
-      left: 1.05rem;
-      top: 0.09rem;
-      display: inline-block;
-      width: 1.08rem;
-      height: 0.3rem;
-      border: 3px solid #ff5100;
-      border-radius: 0.3rem;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-      flex-direction: row; }
-      .m-movie header > :nth-child(2) span {
-        font-size: 0.12rem;
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-        flex: 1;
-        width: .1px;
-        text-align: center;
-        line-height: 0.26rem; }
-      .m-movie header > :nth-child(2) > :nth-child(1) {
-        color: #FFFFFF;
-        background: #ff5100;
-        border-bottom-left-radius: 0.1rem;
-        border-top-left-radius: 0.1rem; }
-      .m-movie header > :nth-child(2) > :nth-child(2) {
-        color: #ff5100;
-        background: #FFFFFF;
-        border-bottom-right-radius: 0.1rem;
-        border-top-right-radius: 0.1rem; }
-    .m-movie header > button {
-      width: 0.28rem;
-      height: 0.24rem;
-      position: absolute;
-      left: 3.37rem;
-      top: 0.15rem; }
-    .m-movie header > :nth-child(4) {
-      width: 100vw;
-      margin-top: 0.5rem;
-      display: inline-block;
-      height: 0.3rem;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-      flex-direction: row; }
-      .m-movie header > :nth-child(4) h3 {
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-        flex: 1;
-        width: .1px;
-        text-align: center;
-        line-height: 0.3rem;
-        font-size: 0.14rem;
-        font-weight: normal; }
-  .m-movie section {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
-    width: .1px;
-    width: 100%; }
 @charset "UTF-8";
 /**
  * Yo框架全局base定义
