@@ -21,16 +21,6 @@
       "watchersNums": "0"
     }
   ],
-  "recommendedpiaofangGuess": [
-    {
-      "logourl": "http://mobileimg.gewara.com/images/activity/201612/s_70b891c1_157094d9fd5_1425.png",
-      "width": "100",
-      "link": "http://m.gewara.com/touch/guess/guessSetupList.xhtml",
-      "title": "票房猜猜猜",
-      "content": "新版猜猜猜，快来玩",
-      "height": "100"
-    }
-  ],
   "recommendedscene": [
     {
       "logourl": "http://mobileimg.gewara.com/images/activity/201703/s_4df98ee0_1598baf99d5__260e.jpg",
@@ -71,7 +61,7 @@
       "bigVurl": "http://mobileimg.gewara.com/images/activity/201509/s5b19a5a5_14f022dfaeb__5115.png",
       "bigVurlheight": "300",
       "tag": "vs",
-      "height": "300"
+      "height": "300 "
     },
     {
       "logourl": "http://mobileimg.gewara.com/images/activity/201703/YJfFd7CjbavaXhZzrB4psRTQpXb3.jpg",
@@ -141,6 +131,14 @@
       "link": "http://m.gewara.com/touch/wala/answer.xhtml",
       "title": "每日答题",
       "content": "开一下脑洞赢一堆积分",
+      "height": "100"
+    },
+    {
+      "logourl": "http://mobileimg.gewara.com/images/activity/201612/s_70b891c1_157094d9fd5_1425.png",
+      "width": "100",
+      "link": "http://m.gewara.com/touch/guess/guessSetupList.xhtml",
+      "title": "票房猜猜猜",
+      "content": "新版猜猜猜，快来玩",
       "height": "100"
     }
   ],
