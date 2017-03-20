@@ -730,15 +730,16 @@ html {
   -webkit-flex-direction: column;
   flex-direction: column;
   height: 100%; }
-  .m-index section {
+  .m-index > section {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     flex: 1;
     width: .1px;
     width: 100%;
     background: #fff;
-    position: relative; }
-    .m-index section::after {
+    position: relative;
+    overflow: hidden; }
+    .m-index > section::after {
       pointer-events: none;
       position: absolute;
       z-index: 999;
@@ -752,17 +753,17 @@ html {
       -webkit-transform-origin: 0 0;
       transform-origin: 0 0; }
       @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
-        .m-index section::after {
+        .m-index > section::after {
           width: 100%;
           height: 100%; } }
       @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
-        .m-index section::after {
+        .m-index > section::after {
           width: 200%;
           height: 200%;
           -webkit-transform: scale(0.5);
           transform: scale(0.5); } }
       @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
-        .m-index section::after {
+        .m-index > section::after {
           width: 300%;
           height: 300%;
           -webkit-transform: scale(0.33333);
@@ -966,11 +967,11 @@ html {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   flex-direction: column;
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
   .m-movie header {
     width: 100%;
-    height: 0.72rem;
-    position: relative; }
+    height: 0.74rem; }
     .m-movie header:first-child {
       display: inline-block;
       width: 0.75rem;
@@ -981,7 +982,8 @@ html {
         font-size: 0.12rem;
         position: absolute;
         left: 0.13rem;
-        top: 0.18rem; }
+        top: 0.18rem;
+        height: 0.38rem; }
       .m-movie header:first-child i {
         width: 0.1rem;
         height: 0.06rem;
@@ -1049,12 +1051,113 @@ html {
         line-height: 0.3rem;
         font-size: 0.14rem;
         font-weight: normal; }
-  .m-movie section {
+  .m-movie > section {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     flex: 1;
     width: .1px;
     width: 100%; }
+
+.m-willshow {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden; }
+  .m-willshow > div.months {
+    height: 0.38rem; }
+  .m-willshow div.yo-scroller {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    width: .1px;
+    width: 100%; }
+    .m-willshow div.yo-scroller div.scroller.movies {
+      height: 100%;
+      width: 100%;
+      overflow: hidden; }
+      .m-willshow div.yo-scroller div.scroller.movies div {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        height: 100%; }
+        .m-willshow div.yo-scroller div.scroller.movies div h2 {
+          width: 100%;
+          height: 0.4rem;
+          line-height: 0.4rem;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          font-size: 0.18rem;
+          color: red; }
+        .m-willshow div.yo-scroller div.scroller.movies div .movies-box {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+          flex: 1;
+          width: .1px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+          flex-direction: row;
+          width: 100%; }
+          .m-willshow div.yo-scroller div.scroller.movies div .movies-box > i {
+            display: block;
+            width: 1.6rem;
+            height: auto;
+            padding: 0.1rem; }
+            .m-willshow div.yo-scroller div.scroller.movies div .movies-box > i > img {
+              width: 1.3rem;
+              height: auto; }
+          .m-willshow div.yo-scroller div.scroller.movies div .movies-box > b {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+            width: .1px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            height: 100%;
+            display: block; }
+            .m-willshow div.yo-scroller div.scroller.movies div .movies-box > b > span {
+              -webkit-box-flex: 1;
+              -webkit-flex: 1;
+              flex: 1;
+              width: .1px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              padding: 0.2rem 0;
+              width: 100%;
+              display: block;
+              padding: 0.1rem; }
+            .m-willshow div.yo-scroller div.scroller.movies div .movies-box > b span:first-child {
+              font-size: 0.2rem;
+              color: #666; }
+            .m-willshow div.yo-scroller div.scroller.movies div .movies-box > b span:nth-child(2) {
+              font-size: 0.16rem;
+              color: #666; }
+            .m-willshow div.yo-scroller div.scroller.movies div .movies-box > b span:nth-child(3) {
+              font-size: 0.14rem;
+              color: #666; }
 @charset "UTF-8";
 /**
  * Yo框架全局base定义
